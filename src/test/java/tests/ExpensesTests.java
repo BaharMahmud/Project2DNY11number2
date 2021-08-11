@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import org.openqa.selenium.WebElement;
 
-public class ExpensesTests extends TestBase {
+public class    ExpensesTests extends TestBase {
 
     private void fillExpensesForm(ExpensesPage page) {
         page.checkboxOwn.click();

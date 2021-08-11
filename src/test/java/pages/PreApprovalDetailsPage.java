@@ -7,16 +7,23 @@ public class PreApprovalDetailsPage extends PageBase{
 
 
 
-    @FindBy (xpath = "//input[@name='realtor_info']")
+    @FindBy(xpath = "//span[@data-i18n='eCommerce']")
+    public WebElement mortgageApplicationLink;
+
+    @FindBy(id = "realtorinfo")
     public WebElement realtorInfo;
 
+    @FindBy(xpath = "//input[@name='loan_officer_status']//parent::div/label[text()='No']")
+    public WebElement loanOfficerCheckBox;
 
+    @FindBy(name = "est_purchase_price")
+    public WebElement estimatePurchasePrice;
 
-    @FindBy (name = "est_purchase_price")
-        public WebElement purchasePrice;
+    @FindBy(id = "downpayment")
+    public WebElement downPayment;
 
-    @FindBy (xpath = "//input[@id='downpayment']")
-    public WebElement downPaymentAmount;
+    @FindBy(name = "src_down_payment")
+    public WebElement downPaymentSource;
 
     @FindBy ( xpath = "//a[@href='#next']")
      public WebElement nextButton;

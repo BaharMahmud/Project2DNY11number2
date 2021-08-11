@@ -26,12 +26,11 @@ public class PersonalInformationTests extends TestBase{
       p.mortgageApplicationLink.click();
 
       PreApprovalDetailsPage pad = new PreApprovalDetailsPage();
-
       pad.realtorInfo.sendKeys("Julia: 1234567890");
 
 
-      pad.purchasePrice.sendKeys("250000");
-      pad.downPaymentAmount.sendKeys("5000");
+      pad.estimatePurchasePrice.sendKeys("250000");
+      pad.downPayment.sendKeys("5000");
 
       pad.nextButton.click();
 

@@ -33,7 +33,7 @@ public class SequenceOfClassesToTest extends TestBase {
        preApprovalDetailPage.estimatePurchasePrice.sendKeys(ConfigReader.getProperty("purchasePrice"));
        preApprovalDetailPage.downPayment.sendKeys(ConfigReader.getProperty("downPayment"));
        selectDropDownValueByValue(preApprovalDetailPage.downPaymentSource, ConfigReader.getProperty("downPaymentSource"));
-
+       preApprovalDetailPage.nextButton.click();
    }
     public void ThirdStepPersonalInformationMethod() throws Exception {
 

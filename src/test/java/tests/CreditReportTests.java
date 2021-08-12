@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import pages.CreditReportPage;
 
 public class CreditReportTests extends EmploymentAndIncomeTests{
+
     @Test
     public void positiveAnswerforCreditReport(){
         CreditReportPage creditReportPage=new CreditReportPage();

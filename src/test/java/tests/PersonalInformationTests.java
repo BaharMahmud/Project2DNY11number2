@@ -1,54 +1,42 @@
 package tests;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import pages.LoginPage;
 import pages.PersonalInformationPage;
-import pages.PreApprovalDetailsPage;
-import utilities.ConfigReader;
 import utilities.SequenceOfClassesToTest;
 
 public class PersonalInformationTests extends TestBase{
 
-@Test(groups = {"matt"})
-      public void checkbox() throws Exception {
 
 
-     /* LoginPage loginPage = new LoginPage();
 
-      loginPage.useremailField.sendKeys(ConfigReader.getProperty("username1"));
-      loginPage.passwordField.sendKeys(ConfigReader.getProperty("password1"));
-      loginPage.loginButton.click();
-*/
-       SequenceOfClassesToTest sequenceOfClassesToTest=new SequenceOfClassesToTest();
-       sequenceOfClassesToTest.FirstStepLoginMethod();
-       sequenceOfClassesToTest.SecondStepPreApprovalTest();
-     /* PersonalInformationPage p = new PersonalInformationPage();
-      p.mortgageApplicationLink.click();
-
-      PreApprovalDetailsPage pad = new PreApprovalDetailsPage();
-      pad.realtorInfo.sendKeys("Julia: 1234567890");
+        @Test(groups={"smoke"})
 
 
-      pad.estimatePurchasePrice.sendKeys("250000");
-      pad.downPayment.sendKeys("5000");
+        public void checkbox() {
+            SequenceOfClassesToTest sequenceOfClassesToTest=new SequenceOfClassesToTest();
 
-      pad.nextButton.click();*/
-
-      PersonalInformationPage q = new PersonalInformationPage();
-
-      q.firstName.sendKeys("Matt");
+            try {
+                sequenceOfClassesToTest.SecondStepPreApprovalTest();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+       PersonalInformationPage q = new PersonalInformationPage();
+            Faker faker=new Faker();
+      q.firstName.sendKeys(faker.address().firstName());
       q.middleName.sendKeys("R");
-      q.lastName.sendKeys("Young");
-      q.email.sendKeys("abc123@gmail.com");
-      q.dob.sendKeys("11171986");
-      q.ssn.sendKeys("123563434");
+      q.lastName.sendKeys(faker.address().lastName());
+      q.email.sendKeys(faker.internet().emailAddress());
+      q.dob.sendKeys(faker.backToTheFuture().date());
+      q.ssn.sendKeys(faker.idNumber().ssnValid());
+
 
       Select s = new Select(q.sex);
-      s.selectByValue("Married");
+      s.selectByIndex((int)(Math.random()*2));
 
-      q.cellPhoneNo.sendKeys("1234566767");
-      q.homePhoneNo.sendKeys("3457670987");
+      q.cellPhoneNo.sendKeys(faker.phoneNumber().cellPhone());
+      q.homePhoneNo.sendKeys(faker.phoneNumber().phoneNumber());
       q.nextButton.click();
 
     }

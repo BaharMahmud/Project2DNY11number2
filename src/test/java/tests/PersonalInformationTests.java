@@ -6,23 +6,24 @@ import pages.LoginPage;
 import pages.PersonalInformationPage;
 import pages.PreApprovalDetailsPage;
 import utilities.ConfigReader;
+import utilities.SequenceOfClassesToTest;
 
-public class PersonalInformationTests extends PreApprovalDetailTests{
+public class PersonalInformationTests extends TestBase{
 
 @Test(groups = {"matt"})
-      public void checkbox() throws InterruptedException {
+      public void checkbox() throws Exception {
 
 
-
-      LoginPage loginPage = new LoginPage();
+     /* LoginPage loginPage = new LoginPage();
 
       loginPage.useremailField.sendKeys(ConfigReader.getProperty("username1"));
       loginPage.passwordField.sendKeys(ConfigReader.getProperty("password1"));
       loginPage.loginButton.click();
-
-
-
-      PersonalInformationPage p = new PersonalInformationPage();
+*/
+       SequenceOfClassesToTest sequenceOfClassesToTest=new SequenceOfClassesToTest();
+       sequenceOfClassesToTest.FirstStepLoginMethod();
+       sequenceOfClassesToTest.SecondStepPreApprovalTest();
+     /* PersonalInformationPage p = new PersonalInformationPage();
       p.mortgageApplicationLink.click();
 
       PreApprovalDetailsPage pad = new PreApprovalDetailsPage();
@@ -32,7 +33,7 @@ public class PersonalInformationTests extends PreApprovalDetailTests{
       pad.estimatePurchasePrice.sendKeys("250000");
       pad.downPayment.sendKeys("5000");
 
-      pad.nextButton.click();
+      pad.nextButton.click();*/
 
       PersonalInformationPage q = new PersonalInformationPage();
 

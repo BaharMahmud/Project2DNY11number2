@@ -2,8 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import tests.LoginTests;
 
-public class PreApprovalDetailsPage extends PageBase{
+public class PreApprovalDetailsPage extends PageBase {
 
 
 

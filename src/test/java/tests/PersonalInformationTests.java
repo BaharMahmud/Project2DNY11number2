@@ -7,7 +7,7 @@ import pages.PersonalInformationPage;
 import pages.PreApprovalDetailsPage;
 import utilities.ConfigReader;
 
-public class PersonalInformationTests extends TestBase{
+public class PersonalInformationTests extends PreApprovalDetailTests{
 
 @Test(groups = {"matt"})
       public void checkbox() throws InterruptedException {

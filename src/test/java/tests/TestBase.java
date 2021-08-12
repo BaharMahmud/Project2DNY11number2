@@ -29,10 +29,10 @@ public class TestBase {
     }
 
 
-    @AfterMethod(alwaysRun = true)
-    public void tearDownMethod() {
+  @AfterMethod(alwaysRun = true)
+   public void tearDownMethod() {
 
-        CreateDriver.quitDriver();}
+       CreateDriver.quitDriver();}
         public void selectDropDownValueByValue (WebElement element, String Value ) throws Exception {
             Select dropdown = new Select((element));
             dropdown.selectByVisibleText(Value);

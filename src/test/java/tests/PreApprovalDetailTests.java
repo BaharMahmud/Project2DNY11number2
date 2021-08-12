@@ -6,7 +6,7 @@ import pages.PreApprovalDetailsPage;
 import pages.PreApprovalDetailsPage;
 import utilities.ConfigReader;
 
-public class PreApprovalDetailTests extends  TestBase {
+public class PreApprovalDetailTests extends  LoginTests {
     @Test(groups = {"smoke"})
     public void fillFieldsOfPreApprovalDetailPage() throws Exception {
 

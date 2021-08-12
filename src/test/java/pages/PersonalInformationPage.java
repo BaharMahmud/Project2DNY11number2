@@ -2,8 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import tests.PreApprovalDetailTests;
 
-public class PersonalInformationPage extends PageBase{
+public class PersonalInformationPage extends PageBase {
 
     @FindBy(xpath = "(//span[@class='menu-item'])[1]")
     public WebElement mortgageApplicationLink;

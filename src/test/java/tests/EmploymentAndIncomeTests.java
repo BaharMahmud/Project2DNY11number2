@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import pages.EmploymentAndIncomePage;
 import pages.ExpensesPage;
 
-public class EmploymentAndIncomeTests extends TestBase {
+public class EmploymentAndIncomeTests extends ExpensesTests {
 
     private void fillEmploymentAndIncomeForm(EmploymentAndIncomePage page) {
         if (page.checkboxCurrentJob.isSelected()) {
